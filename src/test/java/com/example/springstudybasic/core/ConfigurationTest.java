@@ -20,5 +20,8 @@ public class ConfigurationTest {
         System.out.println("OrderService 에서 호출하는 memberRepository : " + orderService.getMemberRepository());
         System.out.println("bean 등록 메소드 땜에 호출된 memberRepository : " + memberRepository);
 
+        AppConfig bean = ac.getBean(AppConfig.class);
+        System.out.println("bean으로 등록된 AppConfig 출력 : " + bean);
+
     }
 }
