@@ -3,7 +3,11 @@ package com.example.springstudybasic.core.order;
 import com.example.springstudybasic.core.discount.DiscountPolicy;
 import com.example.springstudybasic.core.member.Member;
 import com.example.springstudybasic.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
@@ -11,11 +15,6 @@ public class OrderServiceImpl implements OrderService{
 
     public MemberRepository getMemberRepository() {
         return memberRepository;
-    }
-
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
     }
 
     @Override
